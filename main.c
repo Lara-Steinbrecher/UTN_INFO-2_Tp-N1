@@ -12,19 +12,25 @@ int main(void)
     
     printf("Bienvendio al final de Info 1\n\n");
 
-    /*CARGA de las fichas*/
+    // CARGA de las fichas
 
     carga_de_fichas(articulos);
     
-    /* Impresion de fichas cargadas*/
+    // Impresion de fichas cargadas
 
     tabla(articulos);
 
-    /* Ordenamiento */
+    // Ordenamiento 
 
     ordenamiento(articulos);
 
-    tabla_ordenada(articulos);
+    printf("\n\n###################################");
+    printf("\n##############ORDENADO#############");
+    printf("\n################################### \n\n");
+
+    // Imprimo ficha devuelta pero ordenada
+
+    tabla(articulos);
 
     return 0;
 }

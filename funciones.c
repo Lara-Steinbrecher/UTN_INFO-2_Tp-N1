@@ -83,18 +83,3 @@ void ordenamiento(articulos_t *articulos ){
     }
 }
 
-void tabla_ordenada(articulos_t *articulos){
-
-    int i = 0;
-
-    printf("\n\n###################################");
-    printf("\n##############ORDENADO#############");
-    printf("\n################################### \n\n");
-
-    i = 0;
-
-    // llamo devuelta a la funcion de tabla, pero ahora Ordenada
-
-    tabla(articulos);
-
-}

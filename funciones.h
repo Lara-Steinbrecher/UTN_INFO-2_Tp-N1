@@ -22,6 +22,4 @@ void tabla(articulos_t *articulos );
 
 void ordenamiento(articulos_t *articulos );
 
-void tabla_ordenada(articulos_t *articulos);
-
 #endif

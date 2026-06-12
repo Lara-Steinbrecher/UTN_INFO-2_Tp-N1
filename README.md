@@ -1,5 +1,6 @@
 # UTN-INFO-2-Tp-N1 🚧
 
+Alumno: Lara Diaz Steinbrecher
 
 Repo Codigo a Refactorizar: [REPO](https://github.com/DamRCorba/Informatica-2/tree/main/02_Estructuras/ejemplos/Ejemplo3)
 
@@ -20,6 +21,21 @@ La separacion de codigo queda a criterio del alumno, aunque se debe intentar sep
 
 
 ## Proceso
+
+Main contiene solamente la función principal donde se llama a:
+- Carga de fichas: permite por consola ingresar los articulos y sus caracteristicas
+- Tabla: Funcion que imprime la tabla de articulos
+- Ordenamiento: Ordena los articulos por cantidad total
+
+## Fix
+
+El codigo original utilizaba un for para ir sumando la cantidad total de cada uno de los articulos tal que: 
+
+> for (i = 0; i < 3; i++) articulos[articulo_index].total += articulos[articulo_index].cantidad_sucursal[i];
+
+Pero esto volvia a sumar aquellos que ya estaban contados. Por lo que esta linea fue cambiada para arreglar el error de sumatoria.
+
+> articulos[articulo_index].total += articulos[articulo_index].cantidad_sucursal[sucursal-1];  
 
 
 
