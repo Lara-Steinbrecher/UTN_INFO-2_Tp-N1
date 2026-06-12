@@ -4,7 +4,7 @@
 
 void carga_de_fichas(articulos_t *articulos ){
 
-    int i = 0;
+    int i = 0, j = 0;
     char articulo[90];
     int articulo_index, sucursal, opc;
 
@@ -24,11 +24,13 @@ void carga_de_fichas(articulos_t *articulos ){
         scanf("%d", &sucursal);
 
         printf("Ingrese la cantidad del articulo para la sucursal %d: ", sucursal);
-        scanf("%d", &articulos[articulo_index].cantidad_sucursal[sucursal-1]);
 
+        scanf("%d", &articulos[articulo_index].cantidad_sucursal[sucursal-1]);
         
-        articulos[articulo_index].total += articulos[articulo_index].cantidad_sucursal[sucursal-1];  
+
+        articulos[articulo_index].total = 0;
         
+        for (i = 0; i < 3; i++) articulos[articulo_index].total += articulos[articulo_index].cantidad_sucursal[i];
           
 
         printf("Desea ingresar otro articulo? 1-Si, 2-No");

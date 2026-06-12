@@ -33,9 +33,11 @@ El codigo original utilizaba un for para ir sumando la cantidad total de cada un
 
 > for (i = 0; i < 3; i++) articulos[articulo_index].total += articulos[articulo_index].cantidad_sucursal[i];
 
-Pero esto volvia a sumar aquellos que ya estaban contados. Por lo que esta linea fue cambiada para arreglar el error de sumatoria.
+Pero no reseteaba el total, por lo que se iban sumando articulos no existentes por lo que se debe resetear antes de volver a sumar:
 
-> articulos[articulo_index].total += articulos[articulo_index].cantidad_sucursal[sucursal-1];  
+> articulos[articulo_index].total = 0;
+
+> for (i = 0; i < 3; i++) articulos[articulo_index].total += articulos[articulo_index].cantidad_sucursal[i];
 
 
 
