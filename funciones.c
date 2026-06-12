@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
-#include "archivo.h"
+#include "funciones.h"
 
 void carga_de_fichas(articulos_t *articulos ){
+
     int i = 0;
     char articulo[90];
     int articulo_index, sucursal, opc;
@@ -39,8 +40,6 @@ void carga_de_fichas(articulos_t *articulos ){
 
 void tabla(articulos_t *articulos ){
     int i = 0;
-    char articulo[90];
-    int articulo_index, sucursal, opc;
     printf("Articulo\tSucursal 1\tSucursal 2\tSucursal 3\tTotal\n");
     while(i< CANT_ARTICULOS && articulos[i].descripcion[0]){
         printf("%s\t\t%d\t\t%d\t\t%d\t\t%d\n", articulos[i].descripcion, articulos[i].cantidad_sucursal[SUCURSAL_1], articulos[i].cantidad_sucursal[SUCURSAL_2], articulos[i].cantidad_sucursal[SUCURSAL_3],articulos[i].total);
@@ -87,20 +86,14 @@ void ordenamiento(articulos_t *articulos ){
 void tabla_ordenada(articulos_t *articulos){
 
     int i = 0;
-    char articulo[90];
-    int articulo_index, sucursal, opc;
 
     printf("\n\n###################################");
     printf("\n##############ORDENADO#############");
     printf("\n################################### \n\n");
 
     i = 0;
-    // printf("Articulo\tSucursal 1\tSucursal 2\tSucursal 3\tTotal\n");
-    // while (i < CANT_ARTICULOS && articulos[i].descripcion[0])
-    // {
-    //     printf("%s\t\t%9d\t\t%4d\t\t%3d\t\t%8d\n", articulos[i].descripcion, articulos[i].cantidad_sucursal[SUCURSAL_1], articulos[i].cantidad_sucursal[SUCURSAL_2], articulos[i].cantidad_sucursal[SUCURSAL_3], articulos[i].total);
-    //     i++;
-    // }
+
+    // llamo devuelta a la funcion de tabla, pero ahora Ordenada
 
     tabla(articulos);
 

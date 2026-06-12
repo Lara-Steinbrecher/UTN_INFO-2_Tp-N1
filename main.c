@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "archivo.h"
+#include "funciones.h"
 
 
 int main(void)
