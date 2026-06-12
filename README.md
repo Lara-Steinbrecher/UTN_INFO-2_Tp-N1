@@ -18,6 +18,11 @@ Crear archivos funciones.c y funciones.h.
 
 La separacion de codigo queda a criterio del alumno, aunque se debe intentar separar en la mayor cantidad de funciones posibles para la legibilidad del codigo.
 
+## Archivos
+
+- main.c
+- funciones.h
+- funciones.c
 
 
 ## Proceso
